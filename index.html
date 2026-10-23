@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo do Número Secreto</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="icone">🎯</div>
+
+      <h1>Jogo do Número Secreto</h1>
+
+      <p class="descricao">
+        Será que você consegue descobrir o número secreto?
+      </p>
+
+      <div class="numero">?</div>
+
+      <p class="instrucao">Escolha um número e tente acertar o desafio!</p>
+
+      <button onclick="iniciarJogo()">Começar jogo</button>
+
+      <p class="rodape">Teste sua sorte e sua lógica!</p>
+    </main>
+
+    <script>
+      function iniciarJogo() {
+        let = numeroSecreto = 29;
+        alert('Boas vindas ao jogo do Número Secreto!');
+        let chute = prompt('Diga um número de 1-100:');
+
+        while (chute !== numeroSecreto) {
+          if (chute < numeroSecreto) {
+            alert('O número secreto é maior que: ' + chute);
+          } else {
+            alert('O número secreto é menor que: ' + chute);
+          }
+
+          chute = Number(prompt('Diga um número de 1-100:'));
+        }
+        alert('Parabéns, você acertou o número secreto!');
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #312e81);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #1e1b4b;
+        width: 100%;
+        max-width: 450px;
+        padding: 40px 30px;
+        border: 1px solid #4338ca;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .icone {
+        font-size: 55px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #ffffff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .descricao {
+        color: #c7d2fe;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .numero {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #312e81;
+        border: 3px solid #818cf8;
+        border-radius: 50%;
+        color: #a5b4fc;
+        font-size: 50px;
+        font-weight: bold;
+        box-shadow: 0 0 25px rgba(129, 140, 248, 0.2);
+      }
+
+      .instrucao {
+        color: #e0e7ff;
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        background-color: #6366f1;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #4f46e5;
+        transform: translateY(-2px);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      .rodape {
+        color: #a5b4fc;
+        font-size: 12px;
+        margin-top: 25px;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </body>
+</html>
