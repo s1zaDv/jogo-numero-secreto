@@ -20,10 +20,13 @@ while (chute !== numeroSecreto) {
 
   tentativas++;
 }
-if (tentativas > 1) {
+
+let resultadoTentativas = tentativas > 1 ? 'Tentativas' : 'Tentativa';
+
+/*if (tentativas > 1) {
   alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativas!');
   console.log('Ele acertou!');
 } else {
   alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativa!');
   console.log('Ele acertou!');
-}
+}*/
