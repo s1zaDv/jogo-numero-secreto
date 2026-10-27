@@ -20,6 +20,10 @@ while (chute !== numeroSecreto) {
 
   tentativas++;
 }
-
-alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativas!');
-console.log('Ele acertou!');
+if (tentativas > 1) {
+  alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativas!');
+  console.log('Ele acertou!');
+} else {
+  alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativa!');
+  console.log('Ele acertou!');
+}
