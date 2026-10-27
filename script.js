@@ -3,7 +3,7 @@ let tentativas = 1
 
 alert('Boas vindas ao jogo do Número Secreto!');
 
-let chute = Number(prompt('Diga um número de 1-100: (' + tentativas + ')''));
+let chute = Number(prompt('Diga um número de 1-100: (tentativas: ' + tentativas + ')''));
 console.log(chute + ' Foi o número escolhido.');
 
 while (chute !== numeroSecreto) {
@@ -15,11 +15,11 @@ while (chute !== numeroSecreto) {
     console.log(chute + ' É maior que ' + numeroSecreto);
   }
 
-  chute = Number(prompt('Diga um número de 1-100: (' + tentativas + ')'));
+  chute = Number(prompt('Diga um número de 1-100: (tentativas: ' + tentativas + ')'));
   console.log('O usuário irá escolher novamente...');
 
   tentativas++;
 }
 
-alert('Parabéns, você acertou o número secreto!');
+alert('Parabéns, você acertou o número secreto com ' + tentativas + ' tentativas!');
 console.log('Ele acertou!');
