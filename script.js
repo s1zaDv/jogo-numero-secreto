@@ -1,5 +1,5 @@
 let numeroMaximo = 100;
-let numeroSecreto = parseInt(Math.random() * numeroMaximo);
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 let tentativas = 1;
 let resultadoTentativas = tentativas > 1 ? 'Tentativas' : 'Tentativa';
 
