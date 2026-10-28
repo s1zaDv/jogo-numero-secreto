@@ -1,11 +1,11 @@
-let numeroSecreto = parseInt(Math.random() * 100);
+let numeroMaximo = 100;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo);
 let tentativas = 1;
+let resultadoTentativas = tentativas > 1 ? 'Tentativas' : 'Tentativa';
 
 alert('Boas vindas ao jogo do Número Secreto!');
 
-let chute = Number(
-  prompt('Diga um número de 1-100: (tentativas: ' + tentativas + ')')
-);
+let chute = Number(prompt(`Diga um número de 1-${numeroMaximo}: `));
 console.log(chute + ' Foi o número escolhido.');
 
 while (chute !== numeroSecreto) {
@@ -18,14 +18,14 @@ while (chute !== numeroSecreto) {
   }
 
   chute = Number(
-    prompt('Diga um número de 1-100: (tentativas: ' + tentativas + ')')
+    prompt(
+      `Diga um número de 1-${numeroMaximo}: (${resultadoTentativas}: ${tentativas})`
+    )
   );
   console.log('O usuário irá escolher novamente...');
 
   tentativas++;
 }
-
-let resultadoTentativas = tentativas > 1 ? 'Tentativas' : 'Tentativa';
 
 alert(
   `Parabéns, você acertou o número secreto com: ${tentativas} ${resultadoTentativas}!`
